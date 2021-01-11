@@ -1,7 +1,7 @@
 {% extends "shop/layout.html" %}
 {% block body %} 
 {% load static %} 
-
+<form action="/shop/contact/" method="post">{% csrf_token%}
 
     <section class="page-section cta" style="background-color: rgb(194, 197, 156);">
         <div class="container">
@@ -17,14 +17,14 @@
                                 <form>
                                     <div class="form-row" >
                                         <div class="col col-contact" style="border-style: dotted;">
-                                            <div class="form-group modern-form__form-group--padding-r"><input class="form-control input input-tr" type="text" placeholder="Name">
+                                            <div class="form-group modern-form__form-group--padding-r"><input class="form-control input input-tr" type="text" placeholder="Name" name="name">
                                                 <div class="line-box">
                                                     <div class="line"></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col col-contact"style="border-style: dotted;">
-                                            <div class="form-group modern-form__form-group--padding-l"><input class="form-control input input-tr" type="text" placeholder="Email">
+                                            <div class="form-group modern-form__form-group--padding-l"><input class="form-control input input-tr" type="text" placeholder="Email" name="email">
                                                 <div class="line-box">
                                                     <div class="line"></div>
                                                 </div>
@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="form-row" style="border-style: dotted;">
                                         <div class="col">
-                                            <div class="form-group modern-form__form-group--padding-t"><textarea class="form-control input modern-form__form-control--textarea" placeholder="Message"></textarea>
+                                            <div class="form-group modern-form__form-group--padding-t"><textarea class="form-control input modern-form__form-control--textarea" placeholder="Message" name="msg"></textarea>
                                                 <div class="line-box">
                                                     <div class="line"></div>
                                                 </div>
@@ -56,4 +56,5 @@
             <div class="about-heading-content"></div>
         </div>
     </section>
+</form>
     {% endblock %}
