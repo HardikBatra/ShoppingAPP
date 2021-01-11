@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Contact
+from .models import Contact,Products
 from datetime import datetime
 def index(request):
     return render(request,'shop/index.html')
@@ -10,7 +10,9 @@ def about(request):
     return render(request,'shop/about.html')
 
 def products(request):
-    return render(request,'shop/products.html')
+    products=Products.objects.all()
+    params={'products':products}
+    return render(request,'shop/products.html', params)
 
 def store(request):
     return render(request,'shop/store.html')
