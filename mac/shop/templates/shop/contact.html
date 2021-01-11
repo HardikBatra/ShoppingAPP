@@ -1,0 +1,59 @@
+{% extends "shop/layout.html" %}
+{% block body %} 
+{% load static %} 
+
+
+    <section class="page-section cta" style="background-color: rgb(194, 197, 156);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <section class="getintouch">
+                        <div class="container modern-form">
+                            <div class="text-center">
+                                <h4 style="color: #212529;font-size: 45px;">Get in touch</h4>
+                            </div>
+                            <hr class="modern-form__hr">
+                            <div class="modern-form__form-container">
+                                <form>
+                                    <div class="form-row" >
+                                        <div class="col col-contact" style="border-style: dotted;">
+                                            <div class="form-group modern-form__form-group--padding-r"><input class="form-control input input-tr" type="text" placeholder="Name">
+                                                <div class="line-box">
+                                                    <div class="line"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-contact"style="border-style: dotted;">
+                                            <div class="form-group modern-form__form-group--padding-l"><input class="form-control input input-tr" type="text" placeholder="Email">
+                                                <div class="line-box">
+                                                    <div class="line"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row" style="border-style: dotted;">
+                                        <div class="col">
+                                            <div class="form-group modern-form__form-group--padding-t"><textarea class="form-control input modern-form__form-control--textarea" placeholder="Message"></textarea>
+                                                <div class="line-box">
+                                                    <div class="line"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col text-center"><button class="btn btn-primary submit-now" type="submit">Submit Now</button></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section about-heading">
+        <div class="container">
+            <div class="about-heading-content"></div>
+        </div>
+    </section>
+    {% endblock %}
